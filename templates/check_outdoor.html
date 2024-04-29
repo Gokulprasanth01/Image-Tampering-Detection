@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Outdoor Image</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            max-width: 600px;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button-group {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .option-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            animation: moveLeft 1s ease infinite; /* Moving animation */
+        }
+        @keyframes moveLeft {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(-5px); }
+            100% { transform: translateX(0); }
+        }
+        .option-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Was the image taken outdoors?</h1>
+        <form action="/process" method="post">
+            <input type="hidden" name="img_name" value="{{ img_name }}">
+            <div class="button-group">
+                <button type="submit" class="option-button" name="outdoor_flag" value="y">Yes</button>
+                <button type="submit" class="option-button" name="outdoor_flag" value="n">No</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
