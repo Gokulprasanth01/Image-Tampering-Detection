@@ -58,9 +58,9 @@ The model achieves an accuracy of [90.07] on the validation set after [15] epoch
 
 Contributions are welcome! Please fork the repository and create a pull request with your changes.
 
-## License
+## Model File
 
-This project is licensed under the [MIT License](LICENSE).
+This project Model file link ->  [https://drive.google.com/file/d/1CCqwfckoLLxFiagwwfX6fGhu8WYxGmU3/view?usp=sharing].
 
 ## Contact
 
